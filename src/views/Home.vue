@@ -16,13 +16,20 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+          <li :class="steps==0?'nav-item active':'nav-item'" @click='jump(0)'>
+            <a class="nav-link" >
+              top1
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li :class="steps==1?'nav-item active':'nav-item'" @click='jump(1)'>
+            <a class="nav-link" >top2</a>
+          </li>
+          <li :class="steps==2?'nav-item active':'nav-item'" @click='jump(2)'>
+            <a class="nav-link" >top3</a>
+          </li>
+          <li :class="steps==3?'nav-item active':'nav-item'" @click='jump(3)'>
+            <a class="nav-link" >top4</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
@@ -64,7 +71,79 @@
 
       <div class="container">
         <!-- Example row of columns -->
-        <div class="row">
+        <div class="row d_jump">
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row d_jump">
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row d_jump">
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>
+              <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="row d_jump">
           <div class="col-md-4">
             <h2>Heading</h2>
             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
@@ -107,6 +186,88 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  data(){
+    return{
+      steps:0
+    }
+  },
+  mounted() {
+    this.$nextTick(function() {
+      window.addEventListener("scroll", this.onScroll);
+    });
+  },
+  methods: {
+    onScroll() {
+      let scrolled =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop; // 586、1063分别为第二个和第三个锚点对应的距离
+      if (scrolled >= 1063) {
+        this.steps = 2;
+      } else if (scrolled < 1063 && scrolled >= 586) {
+        this.steps = 1;
+      } else {
+        this.steps = 0;
+      }
+    }
+  },
+  created() {},
+  methods: {
+    jump(index) {
+     
+      // 用 class="d_jump" 添加锚点
+      let jump = document.querySelectorAll(".d_jump");
+      let total = jump[index].offsetTop;
+      
+      let distance =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop;
+         console.log('jump',total,'---------',distance)
+      // 平滑滚动，时长500ms，每10ms一跳，共50跳
+      let step = total / 50;
+      if (total > distance) {
+        smoothDown();
+      } else {
+        let newTotal = distance - total;
+        step = newTotal / 50;
+        smoothUp();
+      }
+      function smoothDown() {
+        if (distance < total) {
+          distance += step;
+          document.body.scrollTop = distance;
+          document.documentElement.scrollTop = distance;
+          window.pageYOffset = distance;
+          console.log(distance)
+          setTimeout(smoothDown, 10);
+        } else {
+          document.body.scrollTop = total;
+          document.documentElement.scrollTop = total;
+          window.pageYOffset = total;
+        }
+      }
+      function smoothUp() {
+        if (distance > total) {
+          distance -= step;
+          document.body.scrollTop = distance;
+          document.documentElement.scrollTop = distance;
+          window.pageYOffset = distance;
+          setTimeout(smoothUp, 10);
+        } else {
+          document.body.scrollTop = total;
+          document.documentElement.scrollTop = total;
+          window.pageYOffset = total;
+        }
+      }
+    }
   }
 };
 </script>
+<style lang="scss" scoped>
+
+.d_jump{
+  height:100rem;
+}  
+</style>
